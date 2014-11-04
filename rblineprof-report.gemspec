@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.email       = %w[sonots@gmail.com]
   s.homepage    = 'https://github.com/sonots/rblineprof-report'
 
-  s.add_dependency 'rblineprof', '~> 0.3.6'
-  s.add_dependency 'term-ansicolor', '~> 1.3'
+  s.add_runtime_dependency 'term-ansicolor', '~> 1.3'
+  s.add_development_dependency 'rake'
 end

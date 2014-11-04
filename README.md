@@ -31,6 +31,33 @@ end
 LineProf.report(profile)
 ```
 
+Result Example:
+
+```
+[LineProf] ===============================================================
+
+example.rb
+               |   4  target = /./
+               |   5  profile = lineprof(target) do
+ 102.8ms     1 |   6    sleep 0.1
+               |   7  end
+               |   8  LineProf.report(profile)
+```
+
+## Options
+
+### thresholds
+
+Change thresholds to show as:
+
+```ruby
+LineProf.report(profile, threshods: {
+  LineProf::CRITICAL => 1000, # default:  50 (ms)
+  LineProf::WARNING  =>  100, # default:   5 (ms)
+  LineProf::NOMINAL  =>   10, # default: 0.2 (ms)
+})
+```
+
 ## Special Thanks
 
 This is a simple port of [rack-lineprof](https://github.com/kainosnoema/rack-lineprof) to make it possible to use in non-rack application.

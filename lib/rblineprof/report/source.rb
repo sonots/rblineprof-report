@@ -57,7 +57,12 @@ module LineProf
       end
 
       def source_lines
-        @source_lines ||= ::File.open(file_name, 'r').to_a
+        if File.exist?(file_name)
+          @source_lines ||= ::File.readlines(file_name)
+        else
+          $stderr.puts "LineProf::Report::Source: #{file_name} is not found"
+          @source_lines ||= []
+        end
       end
 
       private

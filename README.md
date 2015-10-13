@@ -58,6 +58,14 @@ LineProf.report(profile, threshods: {
 })
 ```
 
+### out
+
+Outputs to a file:
+
+```ruby
+LineProf.report(profile, out: '/tmp/report.txt')
+```
+
 ## Special Thanks
 
 This is a simple port of [rack-lineprof](https://github.com/kainosnoema/rack-lineprof) to make it possible to use in non-rack application.

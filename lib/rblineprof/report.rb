@@ -18,9 +18,20 @@ module LineProf
     # options
     #   :context
     #   :thresholds
+    #   :out
     def report(profile, options = {})
-      puts Term::ANSIColor.blue("\n[LineProf] #{'=' * 63}") + "\n\n" +
-        format_profile(profile, options) + "\n"
+      out_open(options[:out]) do |io|
+        io.puts Term::ANSIColor.blue("\n[LineProf] #{'=' * 63}") << "\n\n" <<
+          format_profile(profile, options) << "\n"
+      end
+    end
+
+    def out_open(path)
+      if path
+        File.open(path, 'a') {|io| yield(io) }
+      else
+        yield($stdout)
+      end
     end
 
     def format_profile(profile, options = {})

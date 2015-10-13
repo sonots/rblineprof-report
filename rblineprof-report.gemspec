@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'rblineprof-report'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.description = 'Format and print the result of rblineprof (github.com/tmm1/rblineprof)'
   s.summary     = 'Format and print the result of rblineprof (github.com/tmm1/rblineprof)'
   s.license     = 'MIT'

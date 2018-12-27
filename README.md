@@ -8,7 +8,7 @@ Makes line-by-line source code profiling easy.
 Add this line to your application's Gemfile:
 
 ```
-gem 'rblineprof',
+gem 'rblineprof'
 gem 'rblineprof-report'
 ```
 

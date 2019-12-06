@@ -51,7 +51,7 @@ example.rb
 Change thresholds to show as:
 
 ```ruby
-LineProf.report(profile, threshods: {
+LineProf.report(profile, thresholds: {
   LineProf::CRITICAL => 1000, # default:  50 (ms)
   LineProf::WARNING  =>  100, # default:   5 (ms)
   LineProf::NOMINAL  =>   10, # default: 0.2 (ms)
